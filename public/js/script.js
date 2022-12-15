@@ -27,12 +27,12 @@
 
     //Si estoy logueado, lo renderizo, sino redirijo al login
     (function () {
-        fetch(`http://localhost:8080/api`)
+        fetch(`https://railway-deploy-production-677c.up.railway.app/api`)
         .then(res => res.text())
         .then(data => {
             console.log(data)
             if (data === '') {
-                location.href = 'http://localhost:8080/api/login'
+                location.href = 'https://railway-deploy-production-677c.up.railway.app/api/login'
             }
             user = data;
             const span = document.createElement('span');
@@ -43,7 +43,7 @@
     })();
 
     logout.addEventListener('click', () => {
-        location.href = 'http://localhost:8080/api/sign-out'
+        location.href = 'https://railway-deploy-production-677c.up.railway.app/api/sign-out'
     })
 
     function showMessage(data) {
@@ -86,7 +86,7 @@
     productosFaker.addEventListener('click', (event) => {
         event.preventDefault();
 
-        fetch(`http://localhost:8080/api/productos-test`, {
+        fetch(`https://railway-deploy-production-677c.up.railway.app/api/productos-test`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

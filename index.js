@@ -156,7 +156,7 @@ if (mode === 'cluster' && cluster.isPrimary) {
     })
     
     server.listen(PORT, () => {
-        console.log(`Server running in http://localhost:${PORT}/ from process ${process.pid}`)
+        console.log(`Server running in https://railway-deploy-production-677c.up.railway.app/ in PORT ${PORT} from process ${process.pid}`)
         // console.log(`Environment:${process.env.NODE_ENV}`);
     })
     
