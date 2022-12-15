@@ -36,7 +36,8 @@ await init()    //conecto a la base de datos
 
 // const { port: PORT, mode } = minimist(process.argv.slice(2), opts);
 
-const PORT = process.env.PORT || 8080
+const mode = '';
+const PORT = process.env.PORT || 8080;
 
 if (mode === 'cluster' && cluster.isPrimary) {
     for (let i = 0; i < os.cpus().length; i++) {
@@ -156,7 +157,7 @@ if (mode === 'cluster' && cluster.isPrimary) {
     
     server.listen(PORT, () => {
         console.log(`Server running in http://localhost:${PORT}/ from process ${process.pid}`)
-        console.log(`Environment:${process.env.NODE_ENV}`);
+        // console.log(`Environment:${process.env.NODE_ENV}`);
     })
     
     server.on("error", error => console.log(`Error en servidor ${error}`));

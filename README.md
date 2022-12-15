@@ -22,7 +22,3 @@ npm start
 ```sh
 npm run dev
 ```
-
-## Compresion sobre la ruta /info
-Sin usar gzip la ruta transfiere 1.4 kB
-Usando gzip la ruta transfiere 884 B
